@@ -2,7 +2,7 @@
 
 Safely connect Google Ads, LinkedIn Ads, Meta Ads, Microsoft Ads and Reddit Ads to Hermes Agent, so your agent can check campaigns, flag what needs attention and make the changes you approve. Built for PPC specialists, agencies and in-house teams.
 
-AdPlug's plugin gives Hermes Agent 16 PPC skills and connects it to AdPlug's hosted MCP server, with one sign-in per ad platform.
+AdPlug's plugin gives Hermes Agent 16 PPC skills, written and used by a PPC expert with 12 years in the field and more than $100M in ad spend managed. The skills work through AdPlug's hosted MCP server, which you add with one command. Each ad platform then connects once, with its own sign-in.
 
 ## What the AdPlug plugin adds to Hermes Agent
 
@@ -10,7 +10,7 @@ AdPlug's plugin gives Hermes Agent 16 PPC skills and connects it to AdPlug's hos
 - **16 PPC skills.** One per ad platform, with what good looks like there and what to check each day, week, month and quarter. The rest do the jobs across platforms: client briefs, audits, wasted spend, growth, new campaigns, ad copy, reviews, diagnosis, lead quality and routines.
 - **A brief for every client.** The agent keeps one brand and goals file per client (the goal, targets, ideal customer, brand voice, guardrails and which ad accounts are theirs) and reads it before any work, scheduled runs included. To write it, the agent reads the client's website and ad accounts, then asks only what it couldn't find (nobody wants a 30-question form).
 - **A preview and your yes before every change.** The agent shows you the account, exactly what will change and the money involved per day and per month, then waits for an explicit yes. New campaigns and ads start paused or as drafts, and scheduled runs only read and propose.
-- **Lead quality with HubSpot.** If you run lead generation, add AdPlug's HubSpot server and the agent judges your ads by what the leads become in the CRM, then sends qualified leads back to the ad platforms as offline conversions.
+- **Lead quality with HubSpot.** If you run lead generation, add AdPlug's HubSpot server and the agent judges your ads by what the leads become in the CRM, then sends qualified leads back to Google, Microsoft, LinkedIn and Reddit as offline conversions.
 
 The plugin is a portable [Agent Plugins v1](https://agent-plugins.org) package: `plugin.json` and 16 skills, with no code, no scripts and no hooks. The skills drive AdPlug's hosted MCP server at `https://api.adplug.app/mcp`.
 
@@ -40,7 +40,7 @@ Last, connect your ad accounts at [adplug.app/dashboard/connections](https://adp
 
 ### Add HubSpot for lead quality
 
-If you run lead generation with HubSpot as your CRM, add AdPlug's HubSpot server as well. The agent then judges your ads by what the leads become: which platforms, campaigns, keywords and job titles bring leads that qualify, create deals and close. It also finds paid leads nobody followed up, and sends qualified leads back to Microsoft, LinkedIn and Reddit, so their bidding chases revenue instead of form fills. For Google, it uses AdPlug's upload where Google accepts it and HubSpot's own Google Ads integration where it doesn't.
+If you run lead generation with HubSpot as your CRM, add AdPlug's HubSpot server as well. The agent then judges your ads by what the leads become: which platforms, campaigns, keywords and job titles bring leads that qualify, become deals and close. It also finds paid leads nobody followed up. And it sends qualified leads back to Google, Microsoft, LinkedIn and Reddit as offline conversions, so each platform's bidding can learn to chase qualified leads instead of form fills.
 
 ```bash
 hermes mcp add adplug-hubspot --url https://api.adplug.app/mcp/hubspot --auth oauth --connect-timeout 300
@@ -100,7 +100,7 @@ AdPlug's plugin has one skill per ad platform and 11 job skills. Each platform s
 | `adplug:build-campaigns` | Groundwork for an ad account you've just opened (tracking, settings, exclusions, audiences) and new campaigns on all five platforms, planned from the brief and created paused or as drafts. |
 | `adplug:ad-copy` | Search ads and assets, Performance Max asset groups, and LinkedIn, Meta and Reddit ads, written from the personas and the landing page, with character limits checked and every claim backed by the landing page or the brief. |
 | `adplug:performance-review` | A morning check that flags only what needs you (one digest across every client for agencies), a weekly review, budget pacing and a client-ready monthly report. |
-| `adplug:lead-quality` | With HubSpot or a CRM export: what ad leads become, where junk leads come from, paid leads nobody followed up, audiences built from the CRM, and qualified leads sent back to the ad platforms as offline conversions. |
+| `adplug:lead-quality` | With HubSpot or a CRM export: what ad leads become, where junk leads come from, paid leads nobody followed up, audiences built from the CRM, and qualified leads sent back to Google, Microsoft, LinkedIn and Reddit as offline conversions. |
 | `adplug:diagnose` | Why something stopped spending or converting, and what to do about it. |
 | `adplug:routines` | Morning checks, weekly reviews, waste reports, monthly client reports and quarterly audits as a few Hermes cron jobs per client, delivered to Telegram, Slack or Discord. Scheduled runs only read and propose. |
 
