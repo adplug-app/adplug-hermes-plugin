@@ -24,8 +24,12 @@ Work ad group by ad group, highest spend first, in small batches the user can re
 - **Two responsive search ads per ad group** when testing: A leads with the main keyword and the core value, proof and call to action; B takes a different angle (the pain, speed, simplicity, the outcome, risk reversal, credibility). Keep the total enabled RSAs per ad group within three; list the weakest existing ones to pause and let the user decide.
 - **Fifteen unique headlines and four descriptions.** Mix lengths. Each headline must make sense on its own, because the platform combines them. Spread them across keyword, benefits, proof, outcomes, ease and calls to action. Put the keyword theme in several headlines and at least one description, in the words people search with.
 - **Descriptions** each stand alone (often only one or two show), front-load the point, and don't repeat the headlines.
-- **Keyword insertion** (`{KeyWord:Default text}`) only in non-brand ad groups with tight keyword themes, with default text that reads well alone. Brand ad groups lead with the brand.
-- **Pinning:** none by default, so the platform can test combinations. Pin only what must always show (a legal line, a brand rule from the brief) and say what pinning costs in ad strength.
+- **Pins and keyword insertion depend on the campaign type:**
+  - **Brand:** pin a headline with the brand name to position 1. Pin more than one brand-name variant there, so the platform can still rotate them. No keyword insertion.
+  - **Generic (non-brand):** at least one headline with keyword insertion (`{KeyWord:Default text}`), with default text that reads well alone and keyword themes tight enough that every keyword reads well in the ad. No pins.
+  - **Competitor:** no keyword insertion, because it would put the competitor's name in the ad. No pins.
+  - The only other pin is a line the brief says must always show, such as a legal disclaimer.
+  - Pin with `{"text": ..., "pinned_position": 1}` on Google and `{"text": ..., "pin": 1}` on Microsoft.
 - **Paths** describe the page topic in readable words.
 - **Assets:** sitelinks to different useful pages (each its own action: pricing, demo, case studies, a key service), with both description lines; callouts with benefits that aren't in the headlines; a structured snippet with real values from the site (header such as Services). Use only URLs that exist in the account or on the site.
 - **Microsoft:** `microsoft_ads_generate_ad_copy` can draft from the landing page as a starting point. Editing an ad sends it back to editorial review. A headline or description list you pass replaces the current one, so pass the full list.
@@ -58,7 +62,7 @@ Run every check and fix failures before you show anything:
 - No price, discount or saving language unless the brief or the page states it.
 - Every claim (numbers, awards, guarantees, timeframes) is on the landing page or in the brief; flag the rest.
 - Editorial: no exclamation marks in headlines, no repeated punctuation, no emoji, no words in all capitals except real acronyms, no phone numbers in ad text, no third-party brand names unless the client is authorised.
-- Keyword insertion syntax exactly `{KeyWord:Default text}`.
+- Keyword insertion syntax exactly `{KeyWord:Default text}`, in generic ad groups only. Pins in brand ad groups only (plus any line the brief requires).
 - The copy matches the page's spelling, formality and voice.
 - No past years, ended offers or out-of-season words.
 

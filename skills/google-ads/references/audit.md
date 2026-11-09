@@ -38,7 +38,7 @@ For each check: what to look at, then the tool. Field names for `google_ads_quer
 - Assets per asset group: `primary_status` and each asset's own results (`asset_group_asset`), and slots left empty (no video, one image ratio).
 
 ## 4. Keywords and search terms
-- Match types: broad match only where Smart Bidding, solid tracking and negatives back it.
+- Match types: phrase and exact are the default. Flag broad match running before phrase and exact ran out of volume, or without Smart Bidding, solid tracking and working negatives.
 - High-spend keywords with few or no conversions, judged against the target (`google_ads_campaign_performance` level keyword).
 - Quality Score and its parts: expected CTR, ad relevance, landing page experience (`google_ads_query` on `keyword_view`).
 - Search terms: wasted spend, wrong intent, competitor names, and converting terms that aren't keywords yet (`google_ads_search_terms`).
@@ -47,6 +47,7 @@ For each check: what to look at, then the tool. Field names for `google_ads_quer
 
 ## 5. Ads and assets
 - Responsive search ads per ad group, ad strength, and each asset's own results (`google_ads_query` on `ad_group_ad` and `ad_group_ad_asset_view`). Google no longer returns performance labels for every asset type, so judge on the metrics.
+- Pins and keyword insertion: pins outside brand ad groups (other than a required legal line), brand ad groups without the brand pinned to headline 1, generic ad groups with no keyword insertion headline, and keyword insertion in competitor ad groups.
 - Stale copy: past years, ended offers and out-of-season words in ads and assets.
 - Disapproved or limited ads and assets, including "destination not working" (`policy_summary` fields).
 - Copy that speaks to the personas, matches the keyword and the landing page, and carries the brief's offer and proof.

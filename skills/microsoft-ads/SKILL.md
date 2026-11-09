@@ -30,7 +30,7 @@ More search volume on the same intent as Google, usually at a lower cost per cli
 
 **Bidding.** Match the strategy to conversion volume, as on Google, and remember volume is lower: a campaign that has enough conversions for a CPA target on Google may not have enough here. Portfolio strategies help pool data across small campaigns.
 
-**Keywords and search queries.** Read the search query report on a rhythm. Microsoft negatives are exact or phrase only, so a word-level block needs phrase. Account-level negatives (`add_account_negative_keywords`) for junk that applies everywhere.
+**Keywords and search queries.** Phrase and exact, with broad match as the last stage, the same as on Google. Read the search query report on a rhythm. Microsoft negatives are exact or phrase only, so a word-level block needs phrase. Account-level negatives (`add_account_negative_keywords`) for junk that applies everywhere.
 
 **Where the ads show.** Bing, Yahoo, AOL and syndicated search partners, plus the Microsoft Audience Network for native ads. The placement report shows which sites took the money. Partners and the Audience Network earn their place on some accounts and drain others: decide per campaign from the results. A new website exclusion list replaces the old one, so read the current list first and keep every entry.
 
