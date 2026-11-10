@@ -1,10 +1,10 @@
 ---
 name: lead-quality
-description: Follow ad leads past the form fill into the CRM. With AdPlug's HubSpot connector (or another CRM the user connects or exports), see which platforms, campaigns, keywords, audiences and job titles bring leads that qualify, create deals and close, check the CRM records where ad leads came from, find junk-lead sources and paid leads nobody followed up, and send qualified leads and sales back to Google, Microsoft, LinkedIn and Reddit so bidding chases revenue. Use for lead generation and B2B: lead quality, junk leads, MQL, SQL, pipeline or revenue from ads, HubSpot, CRM, offline conversions, Conversions API.
+description: "Follow ad leads past the form fill into the CRM. With AdPlug's HubSpot connector (or another CRM the user connects or exports), see which platforms, campaigns, keywords, audiences and job titles bring leads that qualify, create deals and close, check the CRM records where ad leads came from, find junk-lead sources and paid leads nobody followed up, and send qualified leads and sales back to Google, Microsoft, LinkedIn and Reddit so bidding chases revenue. Use for lead generation and B2B: lead quality, junk leads, MQL, SQL, pipeline or revenue from ads, HubSpot, CRM, offline conversions, Conversions API."
 license: MIT
 metadata:
   author: AdPlug
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Lead quality: from ad click to revenue

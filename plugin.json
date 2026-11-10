@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adplug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Safely connect Google Ads, LinkedIn Ads, Meta Ads, Microsoft Ads and Reddit Ads to Hermes Agent, so your agent can check campaigns, flag what needs attention and make the changes you approve. 16 PPC skills: one per platform, plus client briefs, audits, wasted spend, ad copy, reviews and routines.",
   "author": {
     "name": "AdPlug",
